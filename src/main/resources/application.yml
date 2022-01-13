@@ -5,14 +5,14 @@ spring:
   datasource:
     jpa-config:
       driver-class-name: org.mariadb.jdbc.Driver
-      jdbc-url: jdbc:mariadb://183.96.171.136:3306/shkim_test
-      username: shkim
-      password: shkim_12#$
+      jdbc-url: jdbc:mariadb://ip:port/dbName
+      username: userNmae
+      password: password
     mybatis-config:
       driver-class-name: org.mariadb.jdbc.Driver
-      jdbc-url: jdbc:mariadb://183.96.171.136:3306/shkim_test
-      username: shkim
-      password: shkim_12#$
+      jdbc-url: jdbc:mariadb://ip:port/dbName
+      username: userName
+      password: password
   jpa:
     hibernate:
       ddl-auto: none
