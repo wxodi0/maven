@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    jpa-config:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: jdbc:mariadb://183.96.171.136:3306/shkim_test
+      username: shkim
+      password: shkim_12#$
+    mybatis-config:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: jdbc:mariadb://183.96.171.136:3306/shkim_test
+      username: shkim
+      password: shkim_12#$
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: true
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp
+      suffix: .jsp
