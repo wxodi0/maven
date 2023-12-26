@@ -5,17 +5,17 @@ spring:
   datasource:
     jpa-config:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://localhost:3306/tsetDB
+      jdbc-url: jdbc:mysql://localhost:3306/tsetdb
       username: tset1
       password: testuser1234
     mybatis-config:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://localhost:3306/tsetDB
+      jdbc-url: jdbc:mysql://localhost:3306/tsetdb
       username: tset1
       password: testuser1234
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
