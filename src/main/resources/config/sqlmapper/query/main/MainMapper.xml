@@ -5,4 +5,13 @@
     <select id="findAll" resultType="main">
         SELECT SN, CN FROM MAIN
     </select>
+    <select id="findSn" resultType="java.lang.String">
+        SELECT CN FROM MAIN WHERE SN = #{sn}
+    </select>
+    <insert id="save">
+        insert into values(${cn})
+    </insert>
+    <delete id="delete">
+        delete FROM MAIN WHERE sn = #{id}
+    </delete>
 </mapper>
