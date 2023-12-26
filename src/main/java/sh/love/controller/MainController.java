@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import sh.love.jpa.domain.Main;
+import sh.love.model.MainAddDto;
+import sh.love.model.MainInDto;
 import sh.love.service.MainService;
 
 import java.util.List;
@@ -25,17 +27,17 @@ public class MainController {
         return "/main";
     }
     @PostMapping("/")
-    public String main2(Model model) {
-        return "post";
+    public String main2(@RequestBody MainInDto dto) {
+        return mainService.findSn(dto);
     }
 
     @PutMapping("/")
-    public String main3(Model model) {
-        return "put";
+    public String main3(@RequestBody MainAddDto dto) {
+        return mainService.add(dto);
     }
 
-    @DeleteMapping("/")
-    public String main4(Model model) {
-        return "delete";
+    @DeleteMapping("/{id}")
+    public String main4(@PathVariable int id) {
+        return mainService.delete(id);
     }
 }

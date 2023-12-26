@@ -9,4 +9,10 @@ import java.util.List;
 public interface MainMapper {
 
     List<Main> findAll();
+
+    String findSn(String sn);
+
+    String save(String cn);
+
+    String delete(int id);
 }

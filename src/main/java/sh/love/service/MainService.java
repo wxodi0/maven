@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import sh.love.jpa.domain.Main;
 import sh.love.jpa.repository.MainRepository;
 import sh.love.mapper.MainMapper;
+import sh.love.model.MainAddDto;
+import sh.love.model.MainInDto;
 
 import javax.transaction.Transactional;
 import java.util.HashMap;
@@ -26,6 +28,18 @@ public class MainService {
         map.put("mybatis", mainMapper.findAll());
         map.put("jpa", mainRepository.findAll());
         return map;
+    }
+
+    public String findSn(MainInDto dto) {
+        return mainMapper.findSn(dto.getSn());
+    }
+
+    public String add(MainAddDto dto) {
+        return mainMapper.save(dto.getCn());
+    }
+
+    public String delete(int id) {
+        return mainMapper.delete(id);
     }
 
 }
