@@ -1,18 +1,18 @@
 server:
-  port: 8080
+  port: 8098
 
 spring:
   datasource:
     jpa-config:
-      driver-class-name: org.mariadb.jdbc.Driver
-      jdbc-url: jdbc:mariadb://ip:port/dbName
-      username: userNmae
-      password: password
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/tsetDB
+      username: tset1
+      password: testuser1234
     mybatis-config:
-      driver-class-name: org.mariadb.jdbc.Driver
-      jdbc-url: jdbc:mariadb://ip:port/dbName
-      username: userName
-      password: password
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/tsetDB
+      username: tset1
+      password: testuser1234
   jpa:
     hibernate:
       ddl-auto: none
@@ -23,7 +23,3 @@ spring:
         format_sql: true
         show_sql: true
         use_sql_comments: true
-  mvc:
-    view:
-      prefix: /WEB-INF/jsp
-      suffix: .jsp
