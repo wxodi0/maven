@@ -1,6 +1,6 @@
-# 스프링 유틸리티 프로젝트
+## maven을 사용해보자~
 
-spring boot jpa, mybatis, querydsl 기본 프로젝트
+spring boot Jpa, Mybatis, Querydsl 기본 프로젝트
 
 spring boot version 2.5.3
 
