@@ -1,17 +1,11 @@
-package sh.love.jpa.domain;
+package sh.love.model;
 
-import lombok.Data;
-import javax.persistence.*;
-import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@Entity
-@Table(name = "fine_dust")
-public class FineDust {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
+@Getter
+@Setter
+public class FineDustAddDto {
     private String checkData;
     private String checkTime;
     private String area;

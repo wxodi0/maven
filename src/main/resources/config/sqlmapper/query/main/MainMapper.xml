@@ -14,4 +14,27 @@
     <delete id="delete">
         delete FROM MAIN WHERE sn = #{id}
     </delete>
+    <insert id="dustAdd">
+        insert into fine_dust values(fineDust)
+    </insert>
+    <update id="dustUpdate">
+        UPDATE fine_dust
+        SET
+            checkData = #{checkData},
+            checkTime = #{checkTime},
+            area = #{area},
+            ground = #{ground},
+            roadName = #{roadName},
+            startPoint = #{startPoint},
+            endPoint = #{endPoint},
+            temp = #{temp},
+            hum = #{hum},
+            AverageAshDustConcentration = #{averageAshDustConcentration},
+            Legend = #{legend}
+        WHERE
+            id = #{id}
+    </update>
+    <delete id="dustDelete">
+        delete FROM fine_dust WHERE id = #{id}
+    </delete>
 </mapper>
